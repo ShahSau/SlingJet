@@ -14,6 +14,7 @@ const categories = [
   { name: "fashion" },
   { name: "wildlife" },
   { name: "portrait" },
+  { name: "nature" },
   { name: "other" },
 ];
 const Sidebar = ({ closeToggle, user }) => {
