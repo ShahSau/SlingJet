@@ -1,2 +1,2 @@
 # SlingJet
-#### My first attempt to CMS (Content management system)
+#### My first attempt to CMS (Content management system). clone of pinterest
