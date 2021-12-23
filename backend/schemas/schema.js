@@ -8,11 +8,14 @@ import user from './user';
 import comment from './comment';
 import postedBy from './postedBy';
 import save from './save';
+import review from './review';
+import photographer from './photographer';
+import follow from './follow';
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
   name: 'default',
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
-  types: schemaTypes.concat([pin, user, postedBy, comment, save]),
+  types: schemaTypes.concat([pin, user, postedBy, comment, save,review, photographer, follow]),
 })

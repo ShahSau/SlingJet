@@ -22,6 +22,11 @@ const Login = () => {
             navigate('/', {replace:true})
         })
     }
+    const openInNewTab = (url) => {
+        // const newWindow = window.open(url,  'noopener,noreferrer')
+        // if (newWindow) newWindow.opener = null
+        navigate(`${url}`, {replace:true})
+      }
     return (
         <div className='flex justify-start items-center flex-col h-screen'>
             <div className='relative w-full h-full'>
@@ -38,7 +43,8 @@ const Login = () => {
                     <div className='p-5'>
                         <img src={logo} width='130px' alt='logo'/>
                     </div>
-                    <div className='shadow-2xl'>
+                    <h2 className='text-white'>Welcome to SlingJet </h2>
+                    {/* <div className='shadow-2xl'>
                         <GoogleLogin 
                             clientId={process.env.REACT_APP_GOOGLE_API_TOKEN}
                             render={(renderProps)=>(
@@ -55,6 +61,23 @@ const Login = () => {
                             onFailure={responseGoogle}
                             cookiePolicy='single_host_origin'
                         />
+                    </div> */}
+                    <div className='shadow-2xl flex flex-row justify-center items-center top-0 space-x-6 right-0 left-0 bottom-0 bg-blackOverlay'>
+                    <button 
+                                    type='button'
+                                    className='bg-mainColor flex justify-center  items-center p-3 rounded-lg cursor-pointer outline-none gap-4'
+                                    onClick={() => openInNewTab('/loginU')}
+                    >
+                        Photo enthusiast
+                    </button>
+                    
+                    <button 
+                                    type='button'
+                                    className='bg-mainColor flex justify-center  items-center p-3 rounded-lg cursor-pointer outline-none'
+                                    onClick={() => openInNewTab('/loginP')}
+                    >
+                        Photographer
+                    </button>
                     </div>
                 </div>
             </div>
