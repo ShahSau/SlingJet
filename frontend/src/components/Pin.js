@@ -14,7 +14,7 @@ const Pin = ({ pin }) => {
   const { postedBy, image, _id, destination,UserId } = pin;
   const user =
     localStorage.getItem("slingjet-user") !== "undefined"
-      ? JSON.parse(localStorage.getItem("user"))
+      ? JSON.parse(localStorage.getItem("slingjet-user"))
       : localStorage.clear();
   let alreadySaved = pin?.save?.filter(
     (item) => item?.postedBy?._id === user?.googleId
